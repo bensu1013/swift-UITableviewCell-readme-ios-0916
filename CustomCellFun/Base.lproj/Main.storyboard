@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gbo-zX-yjD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gbo-zX-yjD">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--THRILLER-->
@@ -13,23 +14,22 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="xcM-MI-phn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="oCI-Pe-dMk" customClass="SongCell" customModule="CustomCellFun" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oCI-Pe-dMk" id="4Te-K0-w21">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <frame key="frameInset" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thriller" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-7j-PcY">
-                                            <rect key="frame" x="8" y="3" width="100" height="88.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="Qgr-XS-Zdh"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qsf-8Q-DyH">
-                                            <rect key="frame" x="117" y="8" width="195" height="33"/>
+                                            <frame key="frameInset" minX="117" minY="8" width="195" height="33"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Name Of Song">
                                                     <attributes>
@@ -42,7 +42,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KKm-mR-0KG">
-                                            <rect key="frame" x="117" y="58" width="195" height="33"/>
+                                            <frame key="frameInset" minX="117" minY="58" width="195" height="33"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Length">
                                                     <attributes>
@@ -69,6 +69,7 @@
                                     <outlet property="albumImageView" destination="yDx-7j-PcY" id="46H-A0-92s"/>
                                     <outlet property="lengthOfSongLabel" destination="KKm-mR-0KG" id="Dsk-en-m2U"/>
                                     <outlet property="nameOfSongLabel" destination="Qsf-8Q-DyH" id="eJD-5H-uxS"/>
+                                    <segue destination="b9N-ew-EIo" kind="show" identifier="detailsSegue" id="5ae-FS-N7U"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,14 +82,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="131-Kd-UUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101.5" y="222.5"/>
+            <point key="canvasLocation" x="982" y="222"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="OQy-Hg-Atd">
+            <objects>
+                <viewController id="b9N-ew-EIo" customClass="DetailViewController" customModule="CustomCellFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3hW-U3-uEn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pqb-Zq-izO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oRd-B2-sj8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCT-O4-bnd">
+                                <frame key="frameInset" minY="64" width="175" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGV-8A-ruv">
+                                <frame key="frameInset" minX="204" minY="139" width="128" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oym-EE-cbe">
+                                <frame key="frameInset" minX="204" minY="188" width="128" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98a-Oi-vyP">
+                                <frame key="frameInset" minX="204" minY="97" width="128" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-iR-sE9">
+                                <frame key="frameInset" minX="16" minY="241" width="343" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailAlbum" destination="98a-Oi-vyP" id="5El-0f-6xh"/>
+                        <outlet property="detailImage" destination="qCT-O4-bnd" id="zOk-lW-xgd"/>
+                        <outlet property="detailLength" destination="Oym-EE-cbe" id="QcB-9J-tEt"/>
+                        <outlet property="detailLyrics" destination="ADE-iR-sE9" id="tju-jR-Fy6"/>
+                        <outlet property="detailName" destination="GGV-8A-ruv" id="dDW-sT-1hT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GvU-xS-g0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.8" y="221.73913043478262"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K8G-pu-RuT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gbo-zX-yjD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yXK-Na-QEI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -100,7 +159,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MD8-bb-sbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508.5" y="222.5"/>
+            <point key="canvasLocation" x="266" y="222"/>
         </scene>
     </scenes>
     <resources>

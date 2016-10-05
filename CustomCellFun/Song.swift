@@ -13,11 +13,12 @@ class Song {
     let name: String
     let album: String
     let length: String
-    
-    init(name: String, album: String, length: String) {
+    let lyrics: String
+    init(name: String, album: String, length: String, lyrics: String) {
         self.name = name
         self.album = album
         self.length = length
+        self.lyrics = lyrics
     }
     
 }

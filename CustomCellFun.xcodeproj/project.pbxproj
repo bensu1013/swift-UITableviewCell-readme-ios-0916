@@ -14,6 +14,7 @@
 		5BC4C3471D13582E00865F25 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4C3461D13582E00865F25 /* TableViewController.swift */; };
 		5BC4C3491D135A5800865F25 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4C3481D135A5800865F25 /* SongCell.swift */; };
 		5BC4C34B1D135B2900865F25 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4C34A1D135B2900865F25 /* Song.swift */; };
+		B5699D541DA59DFC001D5599 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5699D531DA59DFC001D5599 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5BC4C3461D13582E00865F25 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5BC4C3481D135A5800865F25 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		5BC4C34A1D135B2900865F25 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		B5699D531DA59DFC001D5599 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5BC4C34A1D135B2900865F25 /* Song.swift */,
 				5BC4C3461D13582E00865F25 /* TableViewController.swift */,
 				5BC4C3381D13420000865F25 /* Main.storyboard */,
+				B5699D531DA59DFC001D5599 /* DetailViewController.swift */,
 				5BC4C34C1D135E5700865F25 /* Supporting Files */,
 			);
 			path = CustomCellFun;
@@ -152,6 +155,7 @@
 			files = (
 				5BC4C3491D135A5800865F25 /* SongCell.swift in Sources */,
 				5BC4C3471D13582E00865F25 /* TableViewController.swift in Sources */,
+				B5699D541DA59DFC001D5599 /* DetailViewController.swift in Sources */,
 				5BC4C3351D13420000865F25 /* AppDelegate.swift in Sources */,
 				5BC4C34B1D135B2900865F25 /* Song.swift in Sources */,
 			);
